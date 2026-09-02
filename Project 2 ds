@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int bookID[5] = {10, 30, 35, 40, 50};
+    int searchID;
+    bool found = false;
+
+    cout << "Enter book ID to search: ";
+    cin >> searchID;
+
+    for (int i = 0; i < 5; i++) {
+        if (bookID[i] == searchID) {
+            cout << "Book found!" << endl;
+            cout << "Book code: " << bookID[i] << endl;
+            found = true;
+            break;
+        }
+    }
+
+    if (!found) {
+        cout << "Book ID not found." << endl;
+    }
+
+    return 0;
+}
